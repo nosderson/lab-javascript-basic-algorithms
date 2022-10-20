@@ -114,6 +114,6 @@ const paragrafo =
 console.log(interaction1(hacker1, hacker2))
 console.log(interaction2(hacker1, hacker2))
 console.log(interaction3(hacker1, hacker2))
-console.log(`${bonus1(paragrafo)[0]} palavras tem o paragrafo. Foi encontrado ${bonus1(paragrafo)[1]} palavra et.`)
+console.log(`${bonus1(paragrafo)[0]} palavra(s) tem o paragrafo. Foi encontrado ${bonus1(paragrafo)[1]} palavra(s) et.`)
 console.log(bonus2(phraseToCheck[8]));
 
