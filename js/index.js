@@ -1,5 +1,9 @@
 // @ts-check
 
+/**
+ * @param {string} driver
+ * @param {string} navigator
+ */
 function interaction1(driver, navigator) {
     return [
         `The driver's name is ${driver}`,
@@ -7,16 +11,27 @@ function interaction1(driver, navigator) {
     ]
 }
 
+/**
+ * @param {string | any[]} driver
+ * @param {string | any[]} navigator
+ */
 function interaction2(driver, navigator) {
     if (driver.length > navigator.length) return (`${driver} has the longest name, it has ${driver.length} characters`)
     else if (navigator.length > driver.length) return (`${navigator} has the longest name, it has ${navigator.length} characters`)
     else return (`Wow, you both have equally long names, ${driver.length} characters`)
 }
 
+/**
+ * @param {string} idriver
+ * @param {string} inavigator
+ */
 function interaction3(idriver, inavigator) {
 
     return ([colocarEspacos(idriver), reverso(idriver), ordemAlfabetica(idriver, inavigator)])
 
+    /**
+     * @param {string | any[]} driver
+     */
     function colocarEspacos(driver) {
         let copiaDriver = "";
         for (let i = 0; i < driver.length - 1; i++) {
@@ -26,6 +41,9 @@ function interaction3(idriver, inavigator) {
         return copiaDriver.toUpperCase();
     }
 
+    /**
+     * @param {string | any[]} driver
+     */
     function reverso(driver) {
         let copiaDriver = "";
         for (let i = driver.length - 1; i >= 0; i--)
@@ -33,6 +51,10 @@ function interaction3(idriver, inavigator) {
         return copiaDriver;
     }
 
+    /**
+     * @param {string} driver
+     * @param {any} navigator
+     */
     function ordemAlfabetica(driver, navigator) {
         const ordem = driver.localeCompare(navigator);
         console.log(navigator);
@@ -42,10 +64,16 @@ function interaction3(idriver, inavigator) {
     }
 }
 
+/**
+ * @param {string} iparagrafo
+ */
 function bonus1(iparagrafo) {
 
     return ([contarPalavras(iparagrafo), buscarPalavras_et(iparagrafo)])
 
+    /**
+     * @param {string | any[]} paragrafo
+     */
     function contarPalavras(paragrafo) {
         let quantidadepalavras = 0;
 
@@ -61,6 +89,9 @@ function bonus1(iparagrafo) {
         return quantidadepalavras;
     }
 
+    /**
+     * @param {string | any[]} paragrafo
+     */
     function buscarPalavras_et(paragrafo) { //talvez precise ser corrigida, não busca et no inicio da frase, nem no fim, nem se vier seguido de caracteres de pontuação.
         let QuantidadePalavrasEncontradas = 0;
         for (let i = 1; i < paragrafo.length - 2; i++)
@@ -71,6 +102,9 @@ function bonus1(iparagrafo) {
     }
 }
 
+/**
+ * @param {string | any[]} iphraseToCheck
+ */
 function bonus2(iphraseToCheck) {
     const removerCaracteres = ["!", "?", "'", ","]
     let isPalindrome = true;
