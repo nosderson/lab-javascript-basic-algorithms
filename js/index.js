@@ -47,12 +47,18 @@ function bonus1(iparagrafo) {
     return ([contarPalavras(iparagrafo), buscarPalavras_et(iparagrafo)])
 
     function contarPalavras(paragrafo) {
-        let Quantidadepalavras = 1;
+        let quantidadepalavras = 0;
+
+        if (paragrafo.length===0)
+           return quantidadepalavras;
+
+        quantidadepalavras=1;  
+
         for (let i = 1; i < paragrafo.length - 1; i++)
             if ((paragrafo[i] === " ") && (paragrafo[i + 1] !== " "))
-                Quantidadepalavras++;
+                quantidadepalavras++;
 
-        return Quantidadepalavras;
+        return quantidadepalavras;
     }
 
     function buscarPalavras_et(paragrafo) { //talvez precise ser corrigida, não busca et no inicio da frase, nem no fim, nem se vier seguido de caracteres de pontuação.
@@ -110,3 +116,4 @@ console.log(interaction2(hacker1, hacker2))
 console.log(interaction3(hacker1, hacker2))
 console.log(`${bonus1(paragrafo)[0]} palavras tem o paragrafo. Foi encontrado ${bonus1(paragrafo)[1]} palavra et.`)
 console.log(bonus2(phraseToCheck[8]));
+
